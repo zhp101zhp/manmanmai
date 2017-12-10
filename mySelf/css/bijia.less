@@ -1,0 +1,56 @@
+@charset "URF-8";
+
+body{
+    background-color: #fff;
+}
+
+.mm_footer{
+    background-color: #f1f1f1;
+}
+
+// 面板二
+.mm_main{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #f1f1f1;
+    ul{
+        background: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        li{
+            padding: 0 .25rem /* 10/40 */;
+            border-bottom:1px solid #ccc;
+            a{
+                display: block;
+                height:1rem /* 40/40 */;
+                line-height: 1rem /* 40/40 */;
+                position: relative;
+                i{
+                    position: absolute;
+                    right:0;
+                    top:.2rem /* 8/40 */;
+                }
+            }
+            
+            ul{
+                background: #fff;
+                width: 100%;
+                border-top:1px solid #ccc;
+                display: none;
+                
+                li{
+                    float: left;
+                    width: 33.333%;;
+                    height: 1rem /* 40/40 */;
+                    line-height: 1rem /* 40/40 */;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    text-align: center;
+                    font-size: .35rem /* 14/40 */;
+                    color:#666;
+                }
+            }
+        }
+    }
+}

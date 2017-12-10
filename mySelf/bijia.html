@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- remjs要在最开始的时候引用  -->
+    <script src="js/common/rem.js"></script>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bijia.css">
+    
+    <title>慢慢买-比价搜索</title>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <header class="mm_header">
+        <div class="logo">
+            <!-- 点击跳转到首页 -->
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="downLogo">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部模块结束 -->
+
+    <!-- 搜索模块开始 -->
+    <div class="mm_search">
+        <input type="text" placeholder="请输入你想比价的商品" class="txt_search">
+        <a class="btn_search">搜索</a>
+    </div>
+    <!-- 搜索模块结束 -->
+
+    <div class="mm_main">
+        <!-- mui模板 -->
+        <ul class="content">
+        <!-- 挖个坑 -->
+        </ul>
+    </div>
+
+    <!-- 底部模块开始 -->
+    <div class="mm_footer">
+        <div class="top">
+            <a href="javascript:;" >登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:scrollTo(0,0);" style="width: 40%; border: 0;">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                    返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p> <span>手机APP下载</span> <a href="#">慢慢买手机版</a>  -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+
+    <!-- 模板殷勤 -->
+    <script type="text/html" id="tpl">
+        {{each result as v i}}
+            <li>
+                <a href="javascript:;" data-id="{{v.titleId}}">{{v.title}}
+                    <i class="mui-pull-right mui-icon mui-icon-arrowdown"></i>
+                </a>
+                <ul class="clearfix hidden">
+                    <li><a href="#">电视</a></li>
+                   
+                </ul>
+            </li> 
+        {{/each}}
+    </script>
+
+    <!-- 模板二 -->
+    <script type="text/html" id="tpl2">
+        {{each result as v i}}
+            <li><a href="productList.html?categoryid={{v.categoryId}}">{{v.category}}</a></li>
+        {{/each }}
+ 
+    </script>
+    <!-- js文件 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/bijia.js"></script>
+</body>
+</html>

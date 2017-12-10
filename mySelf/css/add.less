@@ -1,0 +1,176 @@
+@charset 'UTF-8';
+
+body{
+    background: #f1f1f1;
+}
+
+.mm_footer{
+    background: #f1f1f1;
+    margin: 0;
+}
+
+.mm_header {
+    background: #ff841d;
+    
+    h3{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top:.25rem /* 10/40 */;
+        color:#fff;
+        font-size: .5rem /* 20/40 */;
+    }
+
+}
+
+.mm_main{
+    width:100%;
+    .nav{
+        height: .925rem /* 37/40 */;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        position: relative;
+        .list{
+            overflow: hidden;
+            height: .925rem /* 37/40 */;
+            line-height: .925rem /* 37/40 */;
+            ul{
+                li{
+                    float: left;
+                    width: 33.33%;
+                    text-align: center;
+                    position: relative;
+                    font-size: .45rem /* 18/40 */;
+                    i{
+                        width: 0;
+                        height: 0;
+                        color:#666;
+                  
+                      /*  border-style: solid;
+                        border-width: 20px;
+                        border-color: transparent;*/
+                        border: .175rem /* 7/40 */  solid transparent;
+                        border-bottom-color: #666;
+                        position: absolute;
+                        margin-left: .25rem /* 10/40 */;
+                        top:.25rem /* 10/40 */;
+                    }
+                }
+            }
+
+            margin-right: .875rem /* 35/40 */
+        }
+        .search{
+            overflow: hidden;
+            float: right;
+            width:.85rem /* 34/40 */;
+            height: .85rem /* 34/40 */;
+            text-align: center;
+            border-left: 1px solid #ccc;
+            padding-top: .075rem /* 3/40 */;
+            box-sizing: border-box;
+        }
+        .down {
+            width: 100%;
+            background: #fff;
+            z-index: 222;
+            display: none;
+            position: absolute;
+            top: .95rem /* 38/40 */;
+            left:0;
+            ul{
+                z-index: 88;
+                li{
+                    height: 1rem /* 40/40 */;
+                    line-height: 1rem /* 40/40 */;
+                    border-bottom: 1px solid #ccc;
+                    padding-left: .25rem /* 10/40 */;
+                    font-size: .45rem /* 18/40 */;
+                    z-index: 88;
+                    span{
+                        float: right;
+                        color:red;
+                        font-size: 1rem /* 40/40 */;
+                        z-index: 88;
+                    }
+                }         
+            }
+        }
+
+        .all{
+            z-index: 33;
+        }
+        #shop{
+            z-index: 11;
+        }
+        #area{
+            z-index: 22;
+        }
+       
+        
+    }
+
+    .content{
+        padding: .25rem /* 10/40 */;
+        width: 100%;
+        ul{
+            width: 100%;
+            li{
+                width: 49%;
+                float: left;
+                background: #fff;
+                margin-bottom:.2rem /* 8/40 */;
+                a{
+                    display: block;
+                    width: 100%;
+                    padding: .25rem /* 10/40 */;
+                    .img{
+                        width: 100%;
+                        text-align: center;
+                        img{
+                            width: 4.35rem /* 174/40 */;
+                            height: 4.35rem /* 174/40 */;
+                        }
+                    }
+                    p.title{
+                        font-size: .3rem /* 12/40 */;
+                        color:#000;
+                        padding: 0 .25rem /* 10/40 */;
+                        margin: 0;
+                        height: .35rem /* 14/40 */;
+                        word-break: break-all;
+                        text-align: left;
+                        line-height: .35rem /* 14/40 */;
+                        //text-overflow: ellipsis;
+                        white-space:nowrap;
+                        overflow: hidden;
+
+                    }
+                    p.pay{
+                        margin: 0;
+                        margin-top: .25rem /* 10/40 */;
+                        span{
+                            font-size:.6rem /* 24/40 */;
+                            color:#f8601d; 
+                 
+                        }
+                        .go{
+                            margin: 0;
+                            color:#fff;
+                            padding: .075rem /* 3/40 */ .325rem /* 13/40 */;
+                            display: block;
+                            font-size: .35rem /* 14/40 */;
+                            text-align: center;
+                            float: right;
+                            background:#ff9501;
+                            border-radius: .125rem /* 5/40 */;
+                        }
+                    }
+                }
+            }
+            li:nth-child(2n){
+                margin-left: 2%;
+            }
+        }
+    }
+}

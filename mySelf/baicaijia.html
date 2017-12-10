@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- remjs要在最开始的时候引用  -->
+    <script src="js/common/rem.js"></script>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+
+    <title>慢慢买-白菜价</title>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <header class="mm_header">
+        <div class="logo">
+            <!-- 点击跳转到首页 -->
+            <a href="index.html">
+                    <i class="mui-icon mui-icon-home" style="color:#fff"></i>
+            </a>
+            <h3>   			
+                白菜价——淘宝内部券
+            </h3>
+        </div>
+        
+        <div class="downLogo">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部模块结束 -->
+
+    <!-- 主题区域模块开始 -->
+        <div class="baicai_main">
+
+            <div class="tab_title">
+                <ul class="clearfix">
+                </ul>
+
+                <div class="searchbox icon-search"></div>
+            </div>  
+
+            <div class="bcj-list">
+                     <!-- 挖个大坑 -->
+
+            </div>
+
+            <i class="mui-icon mui-icon-search search"></i>
+        </div>
+
+    <!-- 主题区域模块结束 -->
+
+    <!-- 底部模块开始 -->
+    <div class="mm_footer">
+        <div class="top">
+            <a href="javascript:;" >登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:scrollTo(0,0);" style="width: 40%; border: 0;" class="top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                    返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p> <span>手机APP下载</span> <a href="#">慢慢买手机版</a>  -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+
+
+    <!-- 创建模板 -->
+    <script type="text/html" id="tpl">
+        
+            {{each result as v i}}
+                <li data-id='{{v.titleId}}'><a href="#" class="{{i===0? 'now':''}}">{{v.title}}</a></li> 
+            {{/each}}
+        
+    </script>
+
+
+    <script id="tpl2" type="text/html">
+        <ul class="clearfix">
+            {{each result as value i}}
+            <li class="ui-border-tb ">
+                <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+                <div class="pic"><i></i>{{#value.productImg}}</div>
+                <div class="inf">
+                    <div class="i">
+                        <div class="t">{{#value.productName}}</div>
+                        <div class="pr">{{#value.productPrice}}
+                        </div>
+                    </div>
+                    <div class="o">
+                        {{#value.productCouponRemain}}
+                        <div class="b clearfix">
+                            <div class="q">{{#value.productCoupon}}</div>
+                            <div class="g">{{#value.productHref}}</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        <a class="gotop" id="gotop" href="#" style="display: inline-block;"></a>
+    </script>
+    <!-- js文件 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/jquery.fullPage.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/baicaijia.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- remjs要在最开始的时候引用  -->
+    <script src="js/common/rem.js"></script>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+
+    <title>慢慢买-省钱控</title>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <header class="mm_header">
+        <div class="logo">
+            <!-- 点击跳转到首页 -->
+            <a href="index.html">
+                    <i class="mui-icon mui-icon-home" style="color:#fff"></i>
+            </a>
+            <h3>   			
+                省钱控 - 最新优惠
+            </h3>
+        </div>
+        
+        <div class="downLogo">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部模块结束 -->
+
+    
+
+    <div class="mm_product_list">
+        <ul>
+           <!-- 挖个坑 -->
+           
+        </ul>
+
+        <!-- 分页功能 -->
+
+        <div class="page">
+            <span class="w33 pre">
+                <a href="#">上一页</a>
+            </span>
+            <span class="w33 select">
+                <select name="select" id="selectPage" selected>
+                    
+                  <!-- 挖个坑 -->
+                </select>
+            </span>
+            <span class="w33 next">
+                <a href="#">下一页</a>
+            </span>
+        </div>
+    </div>
+    <!-- 底部模块开始 -->
+    <div class="mm_footer">
+        <div class="top">
+            <a href="javascript:;" >登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:scrollTo(0,0);" style="width: 40%; border: 0;" class="top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                    返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p> <span>手机APP下载</span> <a href="#">慢慢买手机版</a>  -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+
+
+    <!-- 创建模板 -->
+
+    <script type="text/html" id="tpl">
+        {{each result as v i}}
+        <li data-id="{{v.productId}}">
+            <div class="img_wrapper">
+                {{#v.productImgSm}}
+            </div>
+            <div class="txt_wrapper">
+                <p>{{v.productName}} <span>{{v.productPinkage}}</span> </p>
+                <div class="date clearfix">
+                    <span class="one">{{v.productFrom}} | {{v.productTime}}</span>
+                    <span class="two"><i class=" mui-icon mui-icon-email"></i>{{v.productComCount.replace("有","").replace("人评论","")}}</span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl2">
+        <% for (var i=1; i<=15; i++) {%>
+            <option value="{{i}}">{{i}}/{{pageTotal}}</option>
+        <% } %>
+    </script>
+    <!-- js文件 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/jquery.fullPage.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/moneyctrl.js"></script>
+</body>
+</html>

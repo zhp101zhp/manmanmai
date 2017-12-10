@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- remjs要在最开始的时候引用  -->
+    <script src="js/common/rem.js"></script>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>慢慢买-首页</title>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <header class="mm_header">
+        <div class="logo">
+            <!-- 点击跳转到首页 -->
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="downLogo">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部模块结束 -->
+
+    <!-- 搜索模块开始 -->
+    <div class="mm_search">
+        <input type="text" placeholder="请输入你想比价的商品" class="txt_search">
+        <a class="btn_search">搜索</a>
+    </div>
+    <!-- 搜索模块结束 -->
+
+    <!-- 菜单栏选项模块开始 -->
+    <div class="mm_menu">
+        <ul class="clearfix">
+            <li>
+                <a href="bijia.html">
+                    <img src="images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </li>
+            <li>
+                <a href="moneyctrl.html">
+                    <img src="images/ic_cu.png" alt="">
+                    <p>省钱控</p>
+                </a>
+            </li>
+            <li>
+                <a href="dazhe.html">
+                    <img src="images/ic_coudanpin.png" alt="">
+                    <p>国内折扣</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="baicaijia.html">
+                    <img src="images/ic_bcj.png" alt="">
+                    <p>白菜价</p>
+                </a>
+            </li>
+            <li>
+                <a href="moneyctrl.html">
+                    <img src="images/haitao.png" alt="">
+                    <p>海量折扣</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="cut.html">
+                    <img src="images/ic_temai.png" alt="">
+                    <p>优惠券</p>
+                </a>
+            </li>
+            <li>
+                <a href="bijia.html">
+                    <img src="images/ic_trend.png" alt="">
+                    <p>查看历史</p>
+                </a>
+            </li>
+            <li class="duo">
+                <a href="#">
+                    <img src="images/gengduo.png" alt="">
+                    <p>更多</p>
+                </a>
+            </li>
+
+            <li class="none one">
+                <a href="add.html">
+                    <img src="images/ic_coudanpin.png" alt="">
+                    <p>凑单品</p>
+                </a>
+            </li>
+            <li class="none one">
+                <a href="bijia.html">
+                    <img src="images/ic_kb.png" alt="">
+                    <p>口碑排行</p>
+                </a>
+            </li>
+            <li class="none one">
+                <a href="shop.html">
+                    <img src="images/ic_mall.png" alt="">
+                    <p>商品导航</p>
+                </a>
+            </li>
+
+            <li class="none one">
+                <a href="bigAll.html">
+                    <img src="images/ic_pp.png" alt="">
+                    <p>品牌大全</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 菜单栏选项模块结束 -->
+
+    <!-- 导航模块开始 -->
+    <div class="mm_nav">
+        <p>超值折扣推荐</p>
+        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </div>
+    <!-- 导航模块结束 -->
+
+    <!-- 商品列表模块开始 -->
+    <div class="mm_product">
+        <ul>
+           <!-- 挖个坑 -->
+           
+        </ul>
+    </div>
+    <!-- 商品利尿模块结束 -->
+
+    <!-- 更多优惠模块开始 -->
+    <div class="mm_more">
+        <a href="#" >更多优惠信息 »</a>
+    </div>
+    <!-- 更多优惠模块结束 -->
+
+    <!-- 导航模块开始 -->
+    <div class="mm_nav">
+        <p>品牌排行</p>
+        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </div>
+    <!-- 导航模块结束 -->
+
+    <!-- 底部模块开始 -->
+    <div class="mm_footer">
+        <div class="top">
+            <a href="javascript:;" >登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:scrollTo(0,0);" style="width: 40%; border: 0;" class="top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                    返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p> <span>手机APP下载</span> <a href="#">慢慢买手机版</a>  -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+
+    <!-- 模板引擎 -->
+    <script type="text/html" id="tpl">
+        {{each result as v i}}
+        <li data-id={{v.productId}}>
+            <div class="img_wrapper">
+                {{#v.productImgSm}}
+            </div>
+            <div class="txt_wrapper">
+                <p>{{v.productName}} <span>{{v.productPinkage}}</span> </p>
+                <div class="date clearfix">
+                    <span class="one">{{v.productFrom}} | {{v.productTime}}</span>
+                    <span class="two"><i class=" mui-icon mui-icon-email"></i>{{v.productComCount.replace("有","").replace("人评论","")}}</span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- js文件 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/jquery.fullPage.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+body {
+  background: #fff;
+}
+.mm_footer {
+  background: #f1f1f1;
+  margin: 0;
+}
+.mm_header {
+  background: #ff841d;
+}
+.mm_header h3 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0.25rem /* 10/40 */;
+  color: #fff;
+  font-size: 0.5rem /* 20/40 */;
+}
+.mm_main {
+  overflow: hidden;
+  background: #fff;
+}
+.mm_main .link {
+  width: 7.5rem /* 300/40 */;
+  margin: 0.25rem /* 10/40 */ auto;
+}
+.mm_main .link a {
+  padding: 0.25rem /* 10/40 */ 0.2rem /* 8/40 */;
+  background: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  float: left;
+  margin: 0 0 5px 5px;
+}

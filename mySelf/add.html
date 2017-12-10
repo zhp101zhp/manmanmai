@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- remjs要在最开始的时候引用  -->
+    <script src="js/common/rem.js"></script>
+
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/add.css">
+
+    <title>慢慢买-凑单品</title>
+</head>
+<body>
+    <!-- 头部模块开始 -->
+    <header class="mm_header">
+        <div class="logo">
+            <!-- 点击跳转到首页 -->
+            <a href="index.html">
+                    <i class="mui-icon mui-icon-home" style="color:#fff"></i>
+            </a>
+            <h3>   			
+               凑单品
+            </h3>
+        </div>
+        
+        <div class="downLogo">
+            <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部模块结束 -->
+
+    <div class="mm_main">
+        <div class="nav clearfix">
+            <div class="search mui-icon mui-icon-search"></div>
+            <div class="list">
+                <ul class="clearfix">
+                    <li class="upJ">京东 <i></i></li>
+                    <li class="upH">华北 <i></i></li>
+                    <li class="upQ">全部价格<i></i></li>
+                </ul>
+            </div>
+            <div class="down"  id ="shop">
+                <ul>
+                    <!-- 哇第一个坑 -->
+                </ul>
+            </div>
+            <div class="down" id="area">
+                <ul>
+                  <!-- 挖个坑 -->
+                   
+                </ul>
+            </div>
+            <div class="down all">
+                <ul>
+                    <li>全部价格 <span class="mui-icon mui-icon-checkmarkempty right"></span>    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <!-- 挖个大坑 -->
+        </div>
+    </div>
+
+    <!-- 底部模块开始 -->
+    <div class="mm_footer">
+        <div class="top">
+            <a href="javascript:;" >登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:scrollTo(0,0);" style="width: 40%; border: 0;" class="top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                    返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p> <span>手机APP下载</span> <a href="#">慢慢买手机版</a>  -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <!-- 底部模块结束 -->
+
+
+    <!-- 创建第一个模板 -->
+    <script type ="text/html" id="tpl" >
+        {{each result as v i}}
+        <li data-id = {{v.shopId}}>{{v.shopName}}</li>
+        {{/each}}
+    </script>
+
+
+    <script type ="text/html" id="tpl2" >
+        {{each result as v i}}
+        <li data-id = {{v.areaId}}>{{v.areaName}}</li>
+        {{/each}}
+    </script>
+
+    <!-- 创建模板 -->
+    <script type="text/html" id="tpl3">
+        <ul  class="clearfix">
+            {{each result as v i}}
+                <li>
+                    <a href="#">
+                        <div class="img">
+                            <img src="{{v.productImg}}" alt="">  
+                        </div>
+                        <p class="title">{{v.productName}}</p>
+                        <p class="pay"> <span>{{v.productPrice}}</span> <span class="go">去凑单</span></p>
+                    </a>
+                </li>
+
+             {{/each}}
+
+        </ul>
+    </script>
+    <!-- js文件 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/jquery.fullPage.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/add.js"></script>
+</body>
+</html>

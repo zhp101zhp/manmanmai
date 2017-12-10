@@ -1,0 +1,79 @@
+@charset 'UTF-8';
+
+html,
+body {
+    width:100%;
+    height:100%;
+    background: #fff;
+  }
+  .mm_footer {
+    background: #f1f1f1;
+    margin: 0;
+  }
+  .mm_header h3 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0.25rem /* 10/40 */;
+    color: #fff;
+    font-size: 0.5rem /* 20/40 */;
+  }
+
+
+  .mm_main{
+      width:100%;
+      height:100%;
+      padding-top: .25rem /* 10/40 */ ;
+      overflow: auto;
+      ul{
+          li{
+              float: left;
+              width: 50%;
+              border-right: 1px solid #ccc;
+              border-bottom: 1px solid #ccc;
+            //   padding: .25rem /* 10/40 */  0  .25rem /* 10/40 */ 0;
+              text-align: center;
+              box-sizing: border-box;
+              a{
+                display: block;
+                margin: 0 auto;
+                img{
+                    width:3.5rem /* 140/40 */;
+                    height:3.5rem /* 140/40 */;
+
+                }
+                .desc{
+                    color:#000;
+                    padding: 0 .2rem /* 8/40 */;
+                    text-align: left;
+                    height: .9rem /* 36/40 */;
+                }
+                .price{
+                    color:#ff6c00;
+                    font-size: .35rem /* 14/40 */;
+                    text-align: left;
+                    padding: 0 .2rem /* 8/40 */;
+                }
+                .time{
+                    text-align: left;
+                    font-size: .3rem /* 12/40 */;
+                    padding: 0 .2rem /* 8/40 */;
+                }
+              }
+          }
+
+          .li:nth-child(2n){
+            border: 0;
+          }
+      }
+  }
+
+
+
+//   取出滚动条
+
+::-webkit-scrollbar {  
+    width: 0px;  
+    height: 0px;  
+    background-color:transparent;  
+}

@@ -1,0 +1,95 @@
+@charset 'UTF-8';
+
+
+
+.mm_header {
+    
+    h3{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top:.25rem /* 10/40 */;
+        color:#fff;
+        font-size: .5rem /* 20/40 */;
+    }
+
+}
+// 商品列表模块
+.mm_product_list{
+    background-color: #fff;
+    overflow: hidden;
+    li{
+        padding: .375rem /* 15/40 */ 0 .25rem /* 10/40 */;
+        // border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        .img_wrapper{
+            float: left;
+            margin: 0 .25rem /* 10/40 */;
+            img{
+                width:2.5rem /* 100/40 */;
+                height: 2.5rem /* 100/40 */;
+            }
+        }
+        .txt_wrapper{
+            margin-left: 2.75rem /* 110/40 */;
+            font-size: .35rem /* 14/40 */;
+           p{
+               font-size: .4rem /* 16/40 */;
+               height:1.375rem /* 55/40 */;
+               color:#000;
+               span{
+                   color:#ff841d;
+               }
+               margin-bottom: .25rem /* 10/40 */;
+            }
+    
+            .one{
+                float: left;
+                font-size: .3rem /* 12/40 */;
+                color:#666;
+    
+            }
+            .two{
+                float: right;
+                font-size: .3rem /* 12/40 */;
+                color:#666;
+                margin-right: .25rem /* 10/40 */;
+            }
+    
+        }
+    }
+
+    .page{
+        height: .875rem /* 35/40 */;
+        text-align: center;
+        overflow: hidden;
+        padding-left:2.5rem /* 100/40 */; 
+        box-sizing: border-box;
+        line-height: .875rem /* 35/40 */;
+        .select{
+            display: inline-block;
+            width:2.5rem /* 100/40 */;
+            height: 1.25rem /* 50/40 */;
+            border: 1px solid #ccc;
+            background: #fff;
+            
+            #selectPage{
+                display: block;
+                //height:.75rem /* 30/40 */;
+                //width: 1.5rem /* 60/40 */;
+                z-index: 333;
+                //background: #ccc;
+                //line-height: .75rem /* 30/40 */;
+                text-align: center;
+                border-radius: .125rem /* 5/40 */;
+                margin: 0 auto;
+                margin-top: -5px;
+             }
+        }
+        span{
+            height: .825rem /* 33/40 */;
+        }
+    }
+     padding-bottom: .75rem /* 30/40 */;
+   
+}

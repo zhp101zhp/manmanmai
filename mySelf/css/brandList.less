@@ -1,0 +1,227 @@
+@charset 'UTF-8';
+html,
+body{
+    background-color: #fff;
+    height: 100%;
+    width:100%;
+}
+
+.mm_search{
+    margin-bottom: 0;
+}
+
+.mm_footer{
+    background-color: #f1f1f1;
+}
+.mm_main{
+    background: #fff;
+    overflow: hidden;
+    .product_nav{
+        padding:0 .25rem /* 10/40 */;
+        height:1rem /* 40/40 */;
+        background-image: linear-gradient(#fff,#ebebeb);
+        line-height: 1rem /* 40/40 */;
+        border: 1px solid #ccc;
+        a{
+            color:#000;
+            font-size: .35rem /* 14/40 */;
+        }
+        
+    }
+
+    .hot{
+        font-size: 16px;
+        color: #874604;
+        width: 100%;
+        padding: .25rem /* 10/40 */;
+        height: 40px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+    }
+    .product_list{
+        ul{
+            li{
+                padding: .25rem /* 10/40 */ 0;
+                padding-left: .25rem /* 10/40 */;
+                border-bottom : 1px solid #ccc;  
+                position: relative;
+                padding-right: .25rem /* 10/40 */;
+               
+                i{
+                    float: left;
+                    background: #c9c9c9;;
+                    text-align: center;
+                    width: 20px;
+                    height:.5rem /* 20/40 */;
+                    color:#fff;
+                }
+
+                .info{
+                    margin-left: .75rem /* 30/40 */;
+                    h4{
+                        font-weight: normal;
+                        font-size: .4rem /* 16/40 */;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+
+                span{
+                    position: absolute;
+                    color:#666;
+                    right:0;
+                    top:50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            li:nth-child(1) i{
+                background: red;
+            }
+            li:nth-child(2) i{
+                background: #ff9314;
+            }
+            li:nth-child(3) i{
+                background: #8adf5b;
+            }
+        }
+    }
+
+    .high{
+        .title{
+            font-size: .35rem /* 14/40 */;
+            padding-left: .25rem /* 10/40 */;
+            line-height: .9rem /* 36/40 */;
+            border: 1px solid #ccc;
+            color: #874604;
+            background: #f1f1f1;
+        }
+        .list{
+            ul{
+                li{
+                    padding: .25rem /* 10/40 */;
+                    border-bottom: 1px solid #ccc;
+                    a{
+                        display: block;
+                        .img{
+                            float: left;
+                            width:2.75rem /* 110/40 */;
+                            text-align: center;
+                            img{
+                                width:2.5rem /* 100/40 */;
+                                height:2.5rem /* 100/40 */;
+                            }
+                        }
+                        .info{
+                            margin-left: 3.125rem /* 125/40 */;
+                            h3{
+                                font-weight: normal;
+                                font-size: .35rem /* 14/40 */;
+                                height: 1.1rem /* 44/40 */;
+                            }
+                            .price{
+                                span{
+                                    color:#ea3900;
+                                    font-size: .5rem /* 20/40 */;
+                                }
+                                span.star{
+                                   em{
+                                    color:#ea3900;
+                                    font-size: .5rem /* 20/40 */; 
+                                   }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .comment{
+        .title{
+            font-size: .35rem /* 14/40 */;
+            padding-left: .25rem /* 10/40 */;
+            line-height: .9rem /* 36/40 */;
+            border: 1px solid #ccc;
+            color: #874604;
+            background: #f1f1f1;
+        }
+        .comList{
+            ul{
+                li{
+                    padding: .25rem /* 10/40 */;
+                    border-bottom: 1px solid #ccc;
+                    a{
+                        display: block;
+                        .img{
+                            float: left;
+                            width:2.75rem /* 110/40 */;
+                            text-align: center;
+                            img{
+                                width:2.5rem /* 100/40 */;
+                                height:2.5rem /* 100/40 */;
+                            }
+                        }
+                        .info{
+                            margin-left: 3.125rem /* 125/40 */;
+                            h3{
+                                font-weight: normal;
+                                font-size: .35rem /* 14/40 */;
+                                height: 1.1rem /* 44/40 */;
+                            }
+                           
+                        }
+                    }
+
+                    .box{
+                        background: #f8f8f8;
+                        border: 1px solid #ccc;
+                        padding: .25rem /* 10/40 */;
+                        position: relative;
+                        .name{
+                            font-size:.35rem /* 14/40 */;
+                            color: #666;
+                            margin-bottom: .25rem /* 10/40 */;
+                            span.star{
+                                em{
+                                 color:#ea3900;
+                                 font-size: .5rem /* 20/40 */; 
+                                }
+                             }
+                        }
+                        .content{
+                            font-size: .4rem /* 16/40 */;
+                            line-height: 22px;
+                            color:#000;
+                           
+                            
+                        }
+
+                        i{
+                            width: 0;
+                            height: 0;  
+                            position: absolute;
+                            top:-.5rem /* 20/40 */;
+                            left:1.25rem /* 50/40 */;
+                      
+                          /*  border-style: solid;
+                            border-width: 20px;
+                            border-color: transparent;*/
+                            border: .25rem /* 10/40 */ solid #fff;
+                            border-bottom-color: #f8f8f8;
+                            /*border-color: greenyellow hotpink skyblue yellowgreen;*/
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+   
+}
